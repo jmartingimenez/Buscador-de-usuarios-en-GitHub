@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    tools:context="com.example.jonatan.buscadorgit.MainActivity">
+
+    <ImageView
+        android:id="@+id/ivContenedorUsuario"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        android:layout_margin="8dp">
+    </ImageView>
+    <!-- Notese que uso '@+id' para referir al siguiente TextView. Lo ideal es
+    mantener el '+' para las declaraciones, pero también se puede usar. La razon del
+    porque lo uso, es para mantener los tags en el orden con el cual se ven en pantalla-->
+    <TextView
+        android:id="@+id/tvNombreUsuario"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/ivContenedorUsuario"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvScoreUsuario"
+        android:textSize="25dp"
+        android:layout_weight="1">
+    </TextView>
+    <TextView
+        android:id="@+id/tvScoreUsuario"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/tvNombreUsuario"
+        app:layout_constraintTop_toBottomOf="@id/tvNombreUsuario"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="25dp"
+        android:layout_weight="1">
+    </TextView>
+</android.support.constraint.ConstraintLayout>
